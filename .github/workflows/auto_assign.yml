@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign Issue
-        uses: actions-ecosystem/action-assign@v2
+        uses: actions-ecosystem/action-assign@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: donmjoseph

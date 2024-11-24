@@ -1,11 +1,17 @@
-# Base image with Python
+# Use a base image
 FROM python:3.9-slim
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the calculator script into the container
-COPY calculator.py .
+# Copy application files into the container
+COPY . .
 
-# Define the command to run the calculator
-CMD ["python", "calculator.py"]
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose the port the app runs on
+EXPOSE 5000
+
+# Run the application
+CMD ["python", "app.py"]

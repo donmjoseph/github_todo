@@ -11,7 +11,7 @@ jobs:
   assign-issue:
     runs-on: ubuntu-latest
     steps:
-      - name: Assign Issue
+      - name: Actions Ecosystem Action Add Assignees
         uses: actions-ecosystem/action-add-assignees@v1.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -8,13 +8,12 @@ permissions:
   issues: write  # Explicitly grants write permission to manage issues
 
 jobs:
-  assign-issue:
+  add_assignees:
     runs-on: ubuntu-latest
     steps:
-      - name: Actions Ecosystem Action Add Assignees
-        uses: actions-ecosystem/action-add-assignees@v1.0.0
+      - uses: actions-ecosystem/action-add-assignees@v1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.github_token }}
           assignees: donmjoseph
 
           
